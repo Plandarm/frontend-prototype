@@ -3,11 +3,15 @@
   <head>
     <meta lang="en">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
   </head>
 
   <body>
     <div class="wrapper">
-      <aside class="sidebar column filter">
+      <aside class="sidebar column">
         <ul class="sidebar-header">
           <li>User</li>
           <li>Search</li>
@@ -55,69 +59,79 @@
       
       <div class="page column">
         <div class="page-header">HEADER PANEL</div>
+        
+        <div class="page-wrapper filter">
+          <main class="page-main">
+            <section class="main-heading">
+              <h1>Plandarm</h1>
+            </section>
 
-        <main class="page-main filter">
-          <section class="main-heading">
-             <h1>Plandarm</h1>
-          </section>
-    
-          <section contenteditable="true" class="main-body">
-            <h1 contenteditable="true" class="header1-block block">Description</h1>
-    
-            <p contenteditable="true" class="text-block block">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eaque architecto recusandae aliquid nemo facilis consequatur, asperiores fugit, rerum porro esse illum error rem eveniet sunt omnis consequuntur inventore ipsum?
-            </p>
-    
-            <p class="text-block block">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eaque architecto recusandae aliquid nemo facilis consequatur, asperiores fugit, rerum porro esse illum error rem eveniet sunt omnis consequuntur inventore ipsum?
-            </p>
-    
-            <p class="text-block block">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eaque architecto recusandae aliquid nemo facilis consequatur, asperiores fugit, rerum porro esse illum error rem eveniet sunt omnis consequuntur inventore ipsum?
-            </p>
-    
-            <p class="text-block block">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eaque architecto recusandae aliquid nemo facilis consequatur, asperiores fugit, rerum porro esse illum error rem eveniet sunt omnis consequuntur inventore ipsum?
-            </p>
-    
-            <p class="text-block block">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eaque architecto recusandae aliquid nemo facilis consequatur, asperiores fugit, rerum porro esse illum error rem eveniet sunt omnis consequuntur inventore ipsum?
-            </p>
-    
-            <p class="text-block block">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eaque architecto recusandae aliquid nemo facilis consequatur, asperiores fugit, rerum porro esse illum error rem eveniet sunt omnis consequuntur inventore ipsum?
-            </p>
-    
-            <div class="code-block block">
-              spec = "GOST"<br>
-              del spec
-            </div>
-    
-            <div class="img-block block">
-              <img src="https://pk.kpi.ua/wp-content/themes/pkkpi/images/blackLogo.png" alt="kpi govno" width="400">
-            </div>
-    
-            <div class="img-block block">
-              <img src="https://media.discordapp.net/attachments/711923814409175070/783791090410586122/02_kpi.gif" alt="kpi govno" width="400">
-            </div>
-    
-            <script type='text/javascript'>
-              function addRemoveAttr(){
-               var contenteditable = document.getElementById('txt1').contentEditable;
-               
-               if(contenteditable == 'inherit' || contenteditable == 'false'){
-                document.getElementById('txt1').contentEditable = true;
-               }else{
-                document.getElementById('txt1').contentEditable = false;
-               }
-              }
-              </script>
+            <hr class="divider">
+      
+            <section class="main-body">
+              <h1 contenteditable="true" class="header1-block block">Heading 1</h1>
+              <h2 contenteditable="true" class="header2-block block">Heading 2</h2>
+              <h3 contenteditable="true" class="header3-block block">Heading 3</h3>
+
+              <p contenteditable="true" class="text-block block">
+                This is your editable text block. 
+              </p>
+
+              <!-- toggle-list -->
+              <details contenteditable="true" class="toggle-block block">
+                <summary>This is your toggle-list prototype (fix click)</summary>
+
+                <!-- toggle-list contents -->
+                <p contenteditable="true" class="text-block block">
+                  This is your toggle-list content in form of an editable text-block.
+                </p>
+
+                <p contenteditable="false" class="text-block block">
+                  This is your toggle-list content in form of a non-editable text-block.
+                </p>
+
+                <h3 contenteditable="true" class="header3-block block">And as Heading 3</h3>
+              </details>     
               
-              <div class='editable' id='txt1' >Click and edit the text</div>
-              <input type='button' id='but_enable' value ='click' onclick='addRemoveAttr();'>
-    
-          </section>
-        </main>
+              <div class="list-block block">
+                This
+              </div>
+              <div class="list-block block">
+                is
+              </div>
+              <div class="list-block block">
+                YOUR
+              </div>
+              <div class="list-block block">
+                Daily Dose of Plandarm
+              </div>
+
+              <p contenteditable="false" class="text-block block">
+                This is your non-editable text block. 
+              </p>
+
+              <ol>
+                <li class="numbered-list-block block">This</li>
+                <li class="numbered-list-block block">is</li>
+                <li class="numbered-list-block block">your</li>
+                <li class="numbered-list-block block">numbered</li>
+                <li class="numbered-list-block block">list</li>
+                <li class="numbered-list-block block">WIP prototype (custom variant TBD)</li>
+              </ol>
+
+              <!-- code block -->
+              <pre><code contenteditable="" class="block">
+  # your little code-block prototype (no highlight yet)
+  print("Hi! I am using &lt;pre&gt; and &lt;code&gt; tags. &lt;pre&gt; tag allows to keep the initial formatting! Also, if your code doesn't fit - not to worry! Just scroll (try to fit it next time, dude).")
+              </code></pre>        
+      
+              <img class="img-block block" src="https://pk.kpi.ua/wp-content/themes/pkkpi/images/blackLogo.png" alt="kpi govno" width="400">
+              
+              <img class="img-block block" src="https://media.discordapp.net/attachments/711923814409175070/783791090410586122/02_kpi.gif" alt="kpi govno" width="400">
+      
+            </section>
+          </main>
+        </div>
       </div>
       
     </div>
