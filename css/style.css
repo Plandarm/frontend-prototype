@@ -45,10 +45,50 @@ body {
   margin-right: auto;
 }
 
+/* Header parameters */
 .page-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-header-elem {
+  align-self: center;
+  margin: 0.5em;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.page-header div:hover {
+  background-color:rgb(247, 246, 243);
+}
+
+/* Path to the current page */
+ul.page-path {
+  flex-grow: 1;
+  list-style: none;
+}
+
+ul.page-path li{
+  display: inline;
+}
+
+ul.page-path li>a{
+  text-decoration: none;
+  color: #000;
   padding: 5px;
 }
 
+ul.page-path li>a:hover{
+  background-color:rgb(247, 246, 243);
+}
+
+ul.page-path li+li:before {
+  color: black;
+  content: "/\00a0";
+}
+
+
+/* Content-related parameters */
 .main-heading {
   font-family: Arial;
   font-size: 2em;
