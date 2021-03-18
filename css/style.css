@@ -28,6 +28,16 @@ body {
   flex-basis: auto;
 }
 
+.sidebar-header div {
+  padding: 5px 20px;
+  border-radius: 2px;
+  /* margin: 5px; */
+}
+
+.sidebar-header div:hover {
+  background-color:rgb(175, 168, 146);
+}
+
 .sidebar-tree {
   flex-basis: auto;
   flex-grow: 1;
@@ -38,6 +48,14 @@ body {
   flex-basis: auto;
 }
 
+.sidebar-footer div{
+  padding: 15px;
+  border-radius: 2px;
+}
+
+.sidebar-footer div:hover{
+  background-color:rgb(190, 186, 170);
+}
 
 /* page-related parameters */
 .page {
