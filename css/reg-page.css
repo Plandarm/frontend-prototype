@@ -6,7 +6,7 @@ html, body {
     background-color: lightcyan;
 }
 
-.wrap-login {
+.wrap-reg {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,18 +21,27 @@ html, body {
     text-align: center;
 }
 
-.loginbox {
+.regbox {
     display: flex;
     flex-direction: column;
-    
 }
 
-.loginbox > input {
+#name-surname {
+    display: flex;
+    flex-direction: row;
+}
+
+#name-surname > * {
+    margin: 2%;
+    max-width: 42%;
+}
+
+.regbox > input {
     margin: 2%;
     max-width: 100%;
 }
 
-#submit {
+#submit-reg {
     margin: 4%;;
     min-width: 50%;
     align-self: center;
@@ -44,7 +53,7 @@ html, body {
     vertical-align: middle;
 }
   
-#submit:hover {
+#submit-reg:hover {
     background-color: #555555;
     color: white;
     transition: 0.4s;
