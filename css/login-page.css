@@ -23,8 +23,7 @@ html, body {
 
 .loginbox {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 
 .loginbox > input {
@@ -48,4 +47,4 @@ html, body {
     background-color: #555555;
     color: white;
     transition: 0.4s;
-  }
+}
