@@ -69,11 +69,11 @@
             <li><a href="#">Current</a></li>
           </ul>
         
-          <div class="page-header-elem">
+          <div class="page-header-elem" hidden>
             Dark Mode
           </div>
 
-          <div class="page-header-elem">
+          <div class="page-header-elem" hidden>
             Settings
           </div>
 
@@ -101,15 +101,15 @@
                 <summary>This is your toggle-list prototype (fix click)</summary>
 
                 <!-- toggle-list contents -->
-                <p contenteditable="true" class="text-block block">
+                <p contenteditable="true" class="text-block">
                   This is your toggle-list content in form of an editable text-block.
                 </p>
 
-                <p contenteditable="false" class="text-block block">
+                <p contenteditable="false" class="text-block">
                   This is your toggle-list content in form of a non-editable text-block.
                 </p>
 
-                <h3 contenteditable="true" class="header3-block block">And as Heading 3</h3>
+                <h3 contenteditable="true" class="header3-block">And as Heading 3</h3>
               </details>     
               
               <div class="list-block block">
@@ -139,16 +139,23 @@
               </ol>
 
               <!-- code block -->
-              <pre><code contenteditable="" class="block">
+              <div class="block"><pre><code contenteditable="">
 # your little code-block prototype (no highlight yet)
 print("Hi! I am using &lt;pre&gt; and &lt;code&gt; tags. &lt;pre&gt; tag allows to keep the initial formatting! Also, if your code doesn't fit - not to worry! Just scroll (try to fit it next time, dude).")
-              </code></pre>        
+              </code></pre></div>
       
-              <img class="img-block block" src="https://pk.kpi.ua/wp-content/themes/pkkpi/images/blackLogo.png" alt="kpi govno" width="400">
-              
-              <img class="img-block block" src="https://media.discordapp.net/attachments/711923814409175070/783791090410586122/02_kpi.gif" alt="kpi govno" width="400">
-      
+              <div class="img-block block" >
+                <img draggable="false" src="https://pk.kpi.ua/wp-content/themes/pkkpi/images/blackLogo.png" alt="kpi govno" width="400">
+              </div>
+
+
+              <div class="img-block block">
+                <img draggable="false" src="https://media.discordapp.net/attachments/711923814409175070/783791090410586122/02_kpi.gif" alt="kpi govno" width="400">
+              </div>
+
             </section>
+
+            <script src="js/block-dnd.js"></script>
           </main>
         </div>
       </div>
