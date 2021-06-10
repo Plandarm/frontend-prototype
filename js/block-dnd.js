@@ -1,24 +1,42 @@
-/* Area that contains blocks and supports DnD */
+// Area that contains blocks and supports DnD
 const blocksArea = document.querySelector('.main-body');
 
-/* List of blocks */
+// List of blocks 
 const blocks = blocksArea.querySelectorAll('.block');
 
-/* Make all blocks draggable */
-for (const block of blocks) {
-    block.draggable = true;
+function switchEdit (editTrue) {
+    // eventTarget.contentEditable = editTrue;
+    // eventTarget.draggable = !editTrue;
+
+    for (const block of blocks) {
+        block.contentEditable = editTrue;
+        block.draggable = !editTrue;
+    }
 }
 
-/* Determine dragged block */
+switchEdit(true);
+
+document.addEventListener('mousedown', onMouseHold);
+
+function onMouseHold(e) {
+  if (e.ctrlKey && e.target.classList.contains('block')) {
+    console.log("Block taken!");
+    switchEdit(false);
+  }
+}
+
+// Determine dragged block
 blocksArea.addEventListener('dragstart', (evt) => {
     evt.target.classList.add('dragged');
 });
 
 blocksArea.addEventListener('dragend', (evt) => {
     evt.target.classList.remove('dragged');
+    console.log("Block dropped!");
+    switchEdit(true);
 });
 
-/* Get nextBlock only when cursor crossed the center of hoveredBlock */
+// Get nextBlock only when cursor crossed the center of hoveredBlock
 const getNextBlock = (cursorPosition, hoveredBlock) => {
     const hoveredBlockCoord = hoveredBlock.getBoundingClientRect();
     const hoveredBlockCenter = hoveredBlockCoord.y + hoveredBlockCoord.height / 2;
@@ -30,11 +48,11 @@ const getNextBlock = (cursorPosition, hoveredBlock) => {
     return nextBlock;
   };
 
-/* Handle DnD logic */
+// Handle DnD logic
 blocksArea.addEventListener('dragover', (evt) =>{
 
     // Allow Drag & Drop in the main-body area
-    evt.preventDefault();
+    // evt.preventDefault();
 
     // Find currently dragged block
     const draggedBlock = blocksArea.querySelector('.dragged');
@@ -64,6 +82,4 @@ blocksArea.addEventListener('dragover', (evt) =>{
 
     // Insert draggedBlock before nextBlock
     blocksArea.insertBefore(draggedBlock, nextBlock);
-
-
 })
