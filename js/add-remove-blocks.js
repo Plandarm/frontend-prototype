@@ -1,24 +1,25 @@
-let counter = 0;
 const workspace = document.querySelector("section.main-body");
 
 document.addEventListener("keydown", event => shortcut(event))
 function shortcut(event) {
     code = event.code;
-    event.preventDefault();
     if (code === "Enter" && event.shiftKey) {
+        event.preventDefault();
         addBlock(event);
+        blocks = updateBlocks();
     }
-    else if (code === "Delete" && event.ctrlKey) {        
+    else if (code === "Delete" && event.ctrlKey) {       
+        event.preventDefault(); 
         deleteBlock(event);
+        blocks = updateBlocks();
     }
 }
 
 //Works like stack
 function addBlock(event) { //Shift + Enter = New block after focused
     console.log("Add");
-    counter++;
 
-    var textBlock = document.createTextNode(counter);
+    var textBlock = document.createTextNode("");
     var domElement = document.createElement("p");
     domElement.appendChild(textBlock);
     
