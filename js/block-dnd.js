@@ -2,7 +2,11 @@
 const blocksArea = document.querySelector('.main-body');
 
 // List of blocks 
-const blocks = blocksArea.querySelectorAll('.block');
+let blocks = updateBlocks();
+
+function updateBlocks() {
+    return blocksArea.querySelectorAll('.block');
+}
 
 function switchEdit (editTrue) {
     // eventTarget.contentEditable = editTrue;
@@ -17,12 +21,18 @@ function switchEdit (editTrue) {
 switchEdit(true);
 
 document.addEventListener('mousedown', onMouseHold);
+document.addEventListener('mouseup', onMouseRelease);
 
 function onMouseHold(e) {
   if (e.ctrlKey && e.target.classList.contains('block')) {
     console.log("Block taken!");
     switchEdit(false);
   }
+}
+
+function onMouseRelease(e) {
+    console.log("Mouse released!");
+    switchEdit(true);
 }
 
 // Determine dragged block

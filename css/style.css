@@ -173,6 +173,7 @@ ul.page-path li+li:before {
 .block {
   padding: 1px;
   border: 1px solid transparent;
+  min-height: 1em;
   margin: auto;
 }
 
