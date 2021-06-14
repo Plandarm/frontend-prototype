@@ -69,11 +69,11 @@
             <li><a href="#">Current</a></li>
           </ul>
         
-          <div class="page-header-elem">
+          <div class="page-header-elem" hidden>
             Dark Mode
           </div>
 
-          <div class="page-header-elem">
+          <div class="page-header-elem" hidden>
             Settings
           </div>
 
@@ -88,29 +88,24 @@
             <hr class="divider">
       
             <section class="main-body">
-              <h1 contenteditable="true" class="header1-block block">Heading 1</h1>
-              <h2 contenteditable="true" class="header2-block block">Heading 2</h2>
-              <h3 contenteditable="true" class="header3-block block">Heading 3</h3>
+              <h1 class="header1-block block">Heading 1</h1>
+              <h2 class="header2-block block">Heading 2</h2>
+              <h3 class="header3-block block">Heading 3</h3>
 
-              <p contenteditable="true" class="text-block block">
+              <p class="block text-block">
                 This is your editable text block. 
               </p>
 
-              <!-- toggle-list -->
-              <details contenteditable="true" class="toggle-block block">
+              <!-- toggle-list pending total rewrite-->
+              <div class="block"><details class="toggle-block">
                 <summary>This is your toggle-list prototype (fix click)</summary>
 
                 <!-- toggle-list contents -->
-                <p contenteditable="true" class="text-block block">
+                <p contenteditable="true" class="text-block">
                   This is your toggle-list content in form of an editable text-block.
                 </p>
 
-                <p contenteditable="false" class="text-block block">
-                  This is your toggle-list content in form of a non-editable text-block.
-                </p>
-
-                <h3 contenteditable="true" class="header3-block block">And as Heading 3</h3>
-              </details>     
+              </details></div>     
               
               <div class="list-block block">
                 This
@@ -125,30 +120,39 @@
                 Daily Dose of Plandarm
               </div>
 
-              <p contenteditable="false" class="text-block block">
-                This is your non-editable text block. 
+              <p class="text-block block">
+                This is another editable text block. 
               </p>
 
-              <ol>
+              
+              <!-- <ol>
                 <li class="numbered-list-block block">This</li>
                 <li class="numbered-list-block block">is</li>
                 <li class="numbered-list-block block">your</li>
                 <li class="numbered-list-block block">numbered</li>
                 <li class="numbered-list-block block">list</li>
                 <li class="numbered-list-block block">WIP prototype (custom variant TBD)</li>
-              </ol>
+              </ol> -->
 
               <!-- code block -->
-              <pre><code contenteditable="" class="block">
+              <div class="block"><pre><code contenteditable="">
 # your little code-block prototype (no highlight yet)
 print("Hi! I am using &lt;pre&gt; and &lt;code&gt; tags. &lt;pre&gt; tag allows to keep the initial formatting! Also, if your code doesn't fit - not to worry! Just scroll (try to fit it next time, dude).")
-              </code></pre>        
+              </code></pre></div>
       
-              <img class="img-block block" src="https://pk.kpi.ua/wp-content/themes/pkkpi/images/blackLogo.png" alt="kpi govno" width="400">
-              
-              <img class="img-block block" src="https://media.discordapp.net/attachments/711923814409175070/783791090410586122/02_kpi.gif" alt="kpi govno" width="400">
-      
+              <div class="img-block block" >
+                <img draggable="false" src="https://pk.kpi.ua/wp-content/themes/pkkpi/images/blackLogo.png" alt="kpi govno" width="400">
+              </div>
+
+
+              <div class="img-block block">
+                <img draggable="false" src="https://media.discordapp.net/attachments/711923814409175070/783791090410586122/02_kpi.gif" alt="kpi govno" width="400">
+              </div>
+
             </section>
+
+            <script src="js/block-dnd.js"></script>
+            <script src="js/add-remove-blocks.js"></script>
           </main>
         </div>
       </div>
